@@ -16,7 +16,7 @@ const Main = () => {
             <img src={alldata.allItem[0].itemsImage} alt="item" className='
               h-[450px] w-full rounded-[10px] object-cover mb-8 cursor-pointer'/>
             
-            <div className='flex justify-between w-full flex-wrap'>
+            <div className='flex justify-between w-full gap-[1.5rem]'>
                 {
                   alldata.allItem.map((each)=>{
                     return (
