@@ -4,30 +4,32 @@ import minus  from '../images/icon-minus.svg';
 import cartIcon from '../images/icon-cart.svg'
 const Mainright = () => {
   return (
-    <div>
-        <p>SNEAKER COMPANY</p>
-        <h3>Fall Limited Edition <br /> Sneakers</h3>
-        <p>
-        These low-profile sneakers are your perfect casual wear
-        companion. Featuring a durable rubber outer sole. they'll
-        withstand anything the weather can offer.
-        </p>
-        <div>
-            <span id='discountPrice'>$125.00</span>
-            <span id='discount'>50%</span>
-            <span id='actualPrice'>$250.00</span>
-        </div>
-        <div>
-        <div>
-            <button><img src={minus} alt="minus_icon" /></button>
-            <span>0</span>
-            <button><img src={plus} alt="plus_icon" /></button>
-        </div>
-        <button>
-            <img src={cartIcon} alt="cart_icon" />
-            Add to cart
-        </button>
-        </div>
+    <div className='w-[60%]'>
+      <div className='w-[70%]'>
+          <p className='text-DarkOrange font-bold text-xl mb-3'>SNEAKER COMPANY</p>
+          <h3 className='font-bold text-[3rem] tracking-tight leading-[1] mb-[1.5rem]'>Fall Limited Edition <br /> Sneakers</h3>
+          <p className='opacity-50 leading-[1.7] text-lg font-semibold'>
+          These low-profile sneakers are your perfect casual wear
+          companion. Featuring a durable rubber outer sole. they'll
+          withstand anything the weather can offer.
+          </p>
+          <div className='flex flex-wrap items-center gap-x-[1rem] font-bold'>
+              <span id='discountPrice' className='text-[2.5rem] '>$125.00</span>
+              <span id='discount' className='bg-PaleOrange font-[900] py-1 px-2 text-DarkOrange'>50%</span>
+              <span id='actualPrice' className='w-full text-GrayishBlue text-lg line-through'>$250.00</span>
+          </div>
+          <div className='flex gap-[3rem] mt-[3rem] '>
+          <div className='bg-LightGrayishBlue flex items-center rounded-[5px]'>
+              <button className='px-8 py-4'><img src={minus} alt="minus_icon" /></button>
+              <span className='font-bold'>0</span>
+              <button className='px-8 py-4'><img src={plus} alt="plus_icon" /></button>
+          </div>
+          <button className='bg-DarkOrange cursor-pointer text-white font-bold px-[3rem] rounded-[5px]'>
+              <img src={cartIcon} alt="cart_icon" className='align-middle inline-block opacity-50 mr-[1rem]' />
+              Add to cart
+          </button>
+          </div>
+      </div>
     </div>
   )
 }

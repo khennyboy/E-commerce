@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .navBtn{
+        @apply cursor-pointer font-semibold opacity-50 hover:opacity-100 transition-all
+        duration-300 ease-linear hover:border-b-[5px] border-DarkOrange py-[2.5rem]
+    }
+    .imageItem{
+        @apply w-[5.5rem] object-contain rounded-[10px] opacity-50 hover:opacity-100 hover:border-4
+        border-DarkOrange transition-all duration-200 ease-in cursor-pointer box-content
+    }
+}

@@ -9,16 +9,19 @@ const Main = () => {
   let alldata = useContext(datas)
  
   return (
-    <div className='flex'>
-        <div className='relative'>
-            <div>
-              <img src={alldata.allItem[0].itemsImage} alt="item" />
-            </div>
-            <div>
+    <div className='flex m-[5rem_auto] w-[90%] justify-between flex-wrap 
+      items-center'>
+        <div className='relative w-[30%]'>
+            
+            <img src={alldata.allItem[0].itemsImage} alt="item" className='
+              h-[450px] w-full rounded-[10px] object-cover mb-8 cursor-pointer'/>
+            
+            <div className='flex justify-between w-full flex-wrap'>
                 {
                   alldata.allItem.map((each)=>{
                     return (
-                      <img src={each.itemsImage} alt ='itemImage' key={each.id}/>
+                      <img src={each.itemsImage} alt ='itemImage' key={each.id} className='
+                      imageItem'/>
                     )
                   })
                 }
