@@ -1,19 +1,15 @@
-import { useState } from "react";
+import React from "react";
+import AllComponent from "./components/allComponent";
+
 
 function App() {
-  const [username, setusername] = useState('')
-  const [password, setPassword] = useState('')
-  console.log('hello')
-  const setInput = (setter) => (event) => {
-    setter(event.target.value)
-  }
+    
   return (
-    <form>
-      <h3>username is {username} and password is {password}</h3>
-      <input type="text"  onChange={setInput(setusername)}/>
-      <input type="password"  onChange={setInput(setPassword)}/>
-    </form>
+    <div className="w-5/6 mx-auto">
+      <AllComponent/>
+    </div>
   );
 }
 
 export default App;
+  
