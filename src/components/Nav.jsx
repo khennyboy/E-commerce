@@ -1,7 +1,7 @@
 import React from 'react'
 import avatar from '../images/image-avatar.png';
 import open from '../images/icon-menu.svg'
-import closeMenu from '../images/icon-close.svg'
+// import closeMenu from '../images/icon-close.svg'
 import cartIcon from '../images/icon-cart.svg'
 import deleteIcon from '../images/icon-delete.svg'
 import item1 from '../images/image-product-1.jpg'
