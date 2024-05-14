@@ -24,8 +24,9 @@ const Mainright = () => {
               <span className='font-bold'>0</span>
               <button className='px-8 py-4'><img src={plus} alt="plus_icon" /></button>
           </div>
-          <button className='bg-DarkOrange cursor-pointer text-white font-bold px-[3rem] rounded-[5px]'>
-              <img src={cartIcon} alt="cart_icon" className='align-middle inline-block opacity-50 mr-[1rem]' />
+          <button className='bg-DarkOrange cursor-pointer text-white font-bold px-[3rem] rounded-[5px]
+           hover:bg-PaleOrange hover:text-DarkOrange transition-all duration-300 ease-linear group '>
+              <img src={cartIcon} alt="cart_icon" className='align-middle inline-block  mr-[1rem] brightness-200 '  />
               Add to cart
           </button>
           </div>
