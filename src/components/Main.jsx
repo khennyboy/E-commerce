@@ -12,11 +12,11 @@ const Main = () => {
     <div className='flex m-[5rem_auto] w-[90%] justify-between flex-wrap 
       items-center'>
         <div className='relative w-[30%]'>
-            
-            <img src={alldata.allItem[0].itemsImage} alt="item" className='
-              h-[450px] w-full rounded-[10px] object-cover mb-8 cursor-pointer'/>
-            
-            <div className='flex justify-between w-full gap-[1.5rem]'>
+            <div className='w-full'>
+              <img src={alldata.allItem[0].itemsImage} alt="item" className='
+                h-[450px] w-full rounded-[10px] object-cover mb-8 cursor-pointer'/>
+            </div>
+            <div className='flex justify-between w-full gap-[1.5rem] '>
                 {
                   alldata.allItem.map((each)=>{
                     return (
