@@ -32,7 +32,7 @@ const Mainright = () => {
           </div>
           <button className='bg-DarkOrange cursor-pointer text-white font-bold px-[3rem] rounded-[5px]
            hover:bg-PaleOrange hover:text-DarkOrange transition-all duration-300 ease-linear group 
-           mediumDesktop:px-[1rem]  android:py-[10px] tablet:px-0'>
+           mediumDesktop:px-[1rem]  android:py-[10px] tablet:px-0 '>
               <img src={cartIcon} alt="cart_icon" className='align-middle inline-block  mr-[1rem] brightness-200 group-hover:brightness-0
               mediumDesktop:mr-2'  />
               Add to cart

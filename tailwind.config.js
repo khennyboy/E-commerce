@@ -23,8 +23,17 @@ module.exports = {
       },
       fontFamily :{
          'sans': ['"Kumbh Sans"', 'sans-serif']
-      }
+      },
+      animation: {
+        'zoom': 'zoom 0.6s linear',
+      },
+      keyframes: {
+        zoom: {
+          'from': { transform: 'scale(0)' },
+          'to': { transform: 'scale(1)' },
+        }
     },
   },
   plugins: [],
+}
 }
