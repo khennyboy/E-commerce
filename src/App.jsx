@@ -8,6 +8,7 @@ function App() {
   useEffect(() => {
     const handleLoad = () => {
       setLoadDocument(false);
+      console.log('hello')
     };
 
     if (document.readyState === 'complete') {

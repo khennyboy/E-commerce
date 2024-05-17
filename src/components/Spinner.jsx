@@ -3,9 +3,11 @@ import {Bars} from 'react-loader-spinner';
 
 export const Spinner = ({ loading }) => {
   return (
-    <div className='mx-auto my-[100px]  w-fit'>
+    <div className='flex items-center justify-center w-full left-0 fixed top-0  h-[100vh]'>
         <Bars
-            color='#4338ca'
+            color='hsl(26, 100%, 55%)'
+            width= '200'
+            height='200'
             loading={loading}
             size={150}
         />
