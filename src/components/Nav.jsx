@@ -34,18 +34,18 @@ const Nav = () => {
       tablet:fixed tablet:top-0  tablet:h-full tablet:left-0
        tablet:shadow-2xl  tablet:z-10 tablet:overflow-hidden 
        tablet:transition-all tablet:duration-300 tablet:ease-linear  tablet:bg-white
-       tablet:space-x-0 tablet:*:block tabNav tablet:*:pl-[4rem] android:*:pl-4 
+       tablet:space-x-0 tablet:*:block tabNav 
         ${openNav ? 'show ':'' }`} id='navContent'>
 
         <div className='hidden tablet:block tablet:absolute tablet:top-[2rem] 
-        tablet:left-0 android:left-4 cursor-pointer p-2 pl-0' 
+        tablet:left-[2rem] android:left-4 cursor-pointer p-2 ' 
          id='closeIcon' onClick={()=>setOpenNav(prev=>!prev)}>
           <img src={close} alt='toggleMenu' />
         </div>
         <button className='navBtn tablet:mt-[5rem]'>Collections</button>
-        <button className='navBtn '>Men</button>
-        <button className='navBtn '>Women</button>
-        <button className='navBtn '>About</button>
+        <button className='navBtn tablet:my-3'>Men</button>
+        <button className='navBtn mb-3'>Women</button>
+        <button className='navBtn mb-3'>About</button>
         <button className='navBtn '>Contact</button>
       </div>
 

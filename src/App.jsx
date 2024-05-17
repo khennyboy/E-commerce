@@ -6,8 +6,19 @@ function App() {
   const [loadDocument, setLoadDocument] = useState(true);
 
   useEffect(() => {
-    // Simulate the load event
-    setLoadDocument(false);
+    const handleLoad = () => {
+      setLoadDocument(false);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
   return (
