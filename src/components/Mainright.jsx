@@ -24,17 +24,17 @@ const Mainright = () => {
               <span id='actualPrice' className='w-full text-GrayishBlue text-lg line-through 
               android:text-right'>$250.00</span>
           </div>
-          <div className='flex gap-[3rem] mt-[3rem] android:flex-col android:gap-4 tablet:justify-between tablet:*:flex-grow'>
+          <div className='flex gap-[3rem] mt-[3rem] android:flex-col android:gap-6  *:flex-grow tablet:gap-[5rem]'>
           <div className='bg-LightGrayishBlue flex items-center rounded-[5px] '>
               <button className='px-8 py-4'><img src={minus} alt="minus_icon" /></button>
-              <span className='font-bold tablet:flex-grow tablet:text-center'>0</span>
+              <span className='font-bold flex-grow text-center'>0</span>
               <button className='px-8 py-4'><img src={plus} alt="plus_icon" /></button>
           </div>
-          <button className='bg-DarkOrange cursor-pointer text-white font-bold px-[3rem] rounded-[5px]
+          <button className='bg-DarkOrange cursor-pointer text-white font-bold  rounded-[5px]
            hover:bg-PaleOrange hover:text-DarkOrange transition-all duration-300 ease-linear group 
-           mediumDesktop:px-[1rem]  android:py-[10px] tablet:px-0 '>
+             android:py-[10px] '>
               <img src={cartIcon} alt="cart_icon" className='align-middle inline-block  mr-[1rem] brightness-200 group-hover:brightness-0
-              mediumDesktop:mr-2'  />
+              mediumDesktop:mr-1'  />
               Add to cart
           </button>
           </div>

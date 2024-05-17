@@ -6,9 +6,16 @@
 .navBtn{
     @apply cursor-pointer font-semibold opacity-50 hover:opacity-100 transition-all
     duration-300 ease-linear hover:border-b-[5px] border-DarkOrange py-[2.3rem]
-    tablet:hover:border-b-0 tablet:opacity-100 tablet:py-0 tablet:font-bold tablet:text-start
+    tablet:hover:border-b-0 tablet:opacity-100 tablet:py-0 tablet:font-semibold 
+    tablet:text-[1.5rem] android:text-[1.2rem] 
 }
 .imageItem{
     @apply w-[full] object-contain rounded-[10px] opacity-50 hover:opacity-100 hover:border-4
     border-DarkOrange transition-all duration-200 ease-in cursor-pointer box-content
+}
+.tabNav{
+    @apply  tablet:w-[0] 
+}
+.show{
+    @apply w-[50vw] 
 }
