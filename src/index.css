@@ -17,5 +17,5 @@
     @apply  tablet:w-[0] 
 }
 .show{
-    @apply w-[50vw] 
+    @apply w-[50vw] android:w-[80vw]
 }
