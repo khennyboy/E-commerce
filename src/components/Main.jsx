@@ -37,7 +37,7 @@ const Main = () => {
                     return (
                       <div className='w-[6rem]' key={each.id} >
                         <img src={each.itemsImage} alt ='itemImage'  className={`
-                        imageItem ${index===0 ? 'addPreveiwEffect': ''}`}/>
+                        imageItem ${index===0 ? 'border-DarkOrange border-4 box-content opacity-100': ''}`}/>
                       </div>
                     )
                   })
@@ -55,9 +55,9 @@ const Main = () => {
         </div>
         <Mainright/>
 
-        <div id="myModal" className={`fixed z-1 hidden
+        <div id="myModal" className={`fixed z-1 
         py-[3rem] left-0 top-0 w-full h-full overflow-auto
-        bg-black/90 group ${showPrevItem ? 'showPreviewImage': ''}`}>
+        bg-black/90 group ${showPrevItem ? 'block': 'hidden'}`}>
           <span className={`absolute right-12 top-8 text-white text-[40px] font-bold 
            cursor-pointer tablet:top-4 android:right-8`}  onClick={()=>SetshowPrevItem(false)}>&times;</span>
           <div className='w-[80%] max-w-[700px] mx-auto tablet:h-[80%] android:h-[90%] tablet:mt-8 android:w-[95%] 

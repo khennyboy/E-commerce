@@ -5,7 +5,7 @@ import cartIcon from '../images/icon-cart.svg'
 import useShowCartDetails from './showCartDetails';
 const Mainright = () => {
   const itemDescription = useShowCartDetails()
-  let discountPrice = itemDescription.actualPrice - (itemDescription.actualPrice * itemDescription.discount/100)
+  let discountPrice = itemDescription.actualPrice -parseInt((itemDescription.actualPrice * itemDescription.discount/100))
   return (
     <div className='w-[60%] mediumDesktop:w-[50%] largeTablet:w-[55%]
     tablet:w-full'>
