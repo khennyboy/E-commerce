@@ -20,6 +20,9 @@
     rounded-[50%] h-[2rem] w-[2rem] items-center justify-center tablet:cursor-pointer
 }
 
+.addPreveiwEffect{
+    @apply border-DarkOrange border-4 box-content opacity-100
+}
 .addOpac{
     @apply opacity-50 transition-all duration-200 ease-linear
 }

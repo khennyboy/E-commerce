@@ -12,7 +12,8 @@ function useShowCartDetails() {
         })
         setItemData({
             actualPrice : data.actualPrice,
-            discount : data.discount
+            discount : data.discount,
+            count : data.count
         })
     },[allData])
 

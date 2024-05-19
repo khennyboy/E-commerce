@@ -37,7 +37,7 @@ const Main = () => {
                     return (
                       <div className='w-[6rem]' key={each.id} >
                         <img src={each.itemsImage} alt ='itemImage'  className={`
-                        imageItem ${index===0 ? 'border-DarkOrange border-4 box-content opacity-100': ''}`}/>
+                        imageItem ${index===0 ? 'addPreveiwEffect': ''}`}/>
                       </div>
                     )
                   })

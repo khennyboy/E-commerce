@@ -5,7 +5,8 @@ import cartIcon from '../images/icon-cart.svg'
 import useShowCartDetails from './showCartDetails';
 const Mainright = () => {
   const itemDescription = useShowCartDetails()
-  let discountPrice = itemDescription.actualPrice -parseInt((itemDescription.actualPrice * itemDescription.discount/100))
+  let discountPrice = itemDescription.count  * (itemDescription.actualPrice -parseInt((itemDescription.actualPrice * itemDescription.discount/100)))
+
   return (
     <div className='w-[60%] mediumDesktop:w-[50%] largeTablet:w-[55%]
     tablet:w-full'>
@@ -25,12 +26,12 @@ const Mainright = () => {
               <span id='discountPrice' className='text-[2.5rem] android:text-[1.5rem]' >${discountPrice}</span>
               <span id='discount' className='bg-PaleOrange font-[900] py-1 px-2 text-DarkOrange '>{itemDescription.discount}%</span>
               <span id='actualPrice' className='w-full text-GrayishBlue text-lg line-through 
-              android:text-right'>${itemDescription.actualPrice}</span>
+              android:text-right'>${itemDescription.actualPrice * itemDescription.count}</span>
           </div>
           <div className='flex gap-[3rem] mt-[3rem] android:flex-col android:gap-6  *:flex-grow tablet:gap-[5rem]'>
           <div className='bg-LightGrayishBlue flex items-center rounded-[5px] '>
               <button className='px-8 py-4'><img src={minus} alt="minus_icon" /></button>
-              <span className='font-bold flex-grow text-center'>0</span>
+              <span className='font-bold flex-grow text-center'>{itemDescription.count}</span>
               <button className='px-8 py-4'><img src={plus} alt="plus_icon" /></button>
           </div>
           <button className='bg-DarkOrange cursor-pointer text-white font-bold  rounded-[5px]
