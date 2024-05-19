@@ -33,8 +33,6 @@ const useNavEffect = (openNav, setOpenNav, nav, navMenu) => {
     ) {
       setOpenNav(false);
     }
-    console.log(openNav);
-    console.log(event.target);
   }, [openNav, nav, navMenu, setOpenNav]);
 
   useEffect(() => {

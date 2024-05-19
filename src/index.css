@@ -12,10 +12,25 @@
 .imageItem{
     @apply w-[full] object-contain rounded-[10px] opacity-50 hover:opacity-100 hover:border-4
     border-DarkOrange transition-all duration-200 ease-in cursor-pointer box-content
+    
 }
 .tabNav{
-    @apply  tablet:w-[0] 
+    @apply  w-[0] 
 }
 .show{
     @apply w-[50vw] android:w-[80vw]
+}
+.changeImage{
+    @apply top-1/2 bottom-1/2 my-auto absolute hidden tablet:flex bg-white shadow-md 
+    rounded-[50%] h-[2rem] w-[2rem] items-center justify-center tablet:cursor-pointer
+}
+
+.showPreviewImage{
+    @apply block
+}
+.addPreveiwEffect{
+    @apply border-DarkOrange border-4 box-content opacity-100
+}
+.addOpac{
+    @apply opacity-50 transition-all duration-200 ease-linear
 }

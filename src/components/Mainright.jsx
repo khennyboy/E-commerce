@@ -2,7 +2,10 @@ import React from 'react'
 import plus from '../images/icon-plus.svg'
 import minus  from '../images/icon-minus.svg';
 import cartIcon from '../images/icon-cart.svg'
+import useShowCartDetails from './showCartDetails';
 const Mainright = () => {
+  const itemDescription = useShowCartDetails()
+  let discountPrice = itemDescription.actualPrice - (itemDescription.actualPrice * itemDescription.discount/100)
   return (
     <div className='w-[60%] mediumDesktop:w-[50%] largeTablet:w-[55%]
     tablet:w-full'>
@@ -19,10 +22,10 @@ const Mainright = () => {
           </p>
           <div className='flex flex-wrap items-center gap-x-[1rem] font-bold  tablet:flex-nowrap 
           android:mt-4'>
-              <span id='discountPrice' className='text-[2.5rem] android:text-[1.5rem]'>$125.00</span>
-              <span id='discount' className='bg-PaleOrange font-[900] py-1 px-2 text-DarkOrange '>50%</span>
+              <span id='discountPrice' className='text-[2.5rem] android:text-[1.5rem]' >${discountPrice}</span>
+              <span id='discount' className='bg-PaleOrange font-[900] py-1 px-2 text-DarkOrange '>{itemDescription.discount}%</span>
               <span id='actualPrice' className='w-full text-GrayishBlue text-lg line-through 
-              android:text-right'>$250.00</span>
+              android:text-right'>${itemDescription.actualPrice}</span>
           </div>
           <div className='flex gap-[3rem] mt-[3rem] android:flex-col android:gap-6  *:flex-grow tablet:gap-[5rem]'>
           <div className='bg-LightGrayishBlue flex items-center rounded-[5px] '>
