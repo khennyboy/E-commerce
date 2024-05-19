@@ -12,26 +12,26 @@ let allItems = [
     {
         id : 1,
         itemsImage: item1,
-        actualPrice: '1200',
-        discount:'20',
+        actualPrice: 1200,
+        discount:20,
     },
     {
         id:2,
         itemsImage: item2,
-        actualPrice:'1500',
-        discount:'30',
+        actualPrice:1500,
+        discount:30,
     },
     {
         id: 3,
         itemsImage: item3,
-        actualPrice: '1600',
-        discount:'40',
+        actualPrice: 1600,
+        discount: 40,
     },
     {
         id: 4,
         itemsImage: item4,
-        actualPrice:'2000',
-        discount:'10',
+        actualPrice:2000,
+        discount:10,
     },
    
 ]

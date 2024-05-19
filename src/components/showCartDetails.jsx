@@ -14,7 +14,6 @@ function useShowCartDetails() {
             actualPrice : data.actualPrice,
             discount : data.discount
         })
-        console.log(data)
     },[allData])
 
     return itemData

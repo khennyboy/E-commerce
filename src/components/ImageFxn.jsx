@@ -51,7 +51,6 @@ const ImageFxn = (imageRef, prevRef, nextRef, addOpac ) => {
             if(currIndex.current > totalImage){
                 currIndex.current = 0;
             }
-            console.log(currIndex)
             handleOpac.classList.add('addOpac');
             setTimeout(() => {
                 handleOpac.classList.remove('addOpac');
