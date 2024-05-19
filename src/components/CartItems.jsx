@@ -1,10 +1,11 @@
 import React from 'react'
 import deleteIcon from '../images/icon-delete.svg';
 import item1 from '../images/image-product-1.jpg';
-const CartItems = () => {
+const CartItems = ({show}) => {
+    
   return (
-    <div className='absolute top-[100%] right-[0%] z-10 hidden'>
-        <div className=' w-[20vw] shadow-[0_0_2px_1px_#E8E8E8]
+    <div className={`absolute top-[100%] right-[0%] z-10 hidden  ${show ? 'showCartedItem' :''}`}>
+        <div className='w-[20vw] shadow-[0_0_2px_1px_#E8E8E8]
         rounded-[10px] py-[1.5rem] flex flex-col bg-white 
         mediumDesktop:w-[30vw] largeTablet:w-[35vw] android:w-[80vw] tablet:w-[50vw]
         android:py-2'>

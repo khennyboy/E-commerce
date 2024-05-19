@@ -10,6 +10,8 @@ const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
   const navContentRef = useRef(null);
   const openMenuRef = useRef(null);
+  const [showCart, setShowCart] = useState(false)
+
   useNavEffect(openNav, setOpenNav, navContentRef, openMenuRef);
 
   return (
@@ -47,10 +49,10 @@ const Nav = () => {
       </div>
 
       <div className='flex items-center gap-[3rem] relative android:gap-[1rem]'>
-        <img src={cartIcon} alt="cart icon" className='cursor-pointer' />
+        <img src={cartIcon} alt="cart icon" className='cursor-pointer' onClick={()=>setShowCart(prev=>!prev)} />
         <img src={avatar} alt="user" className='mr-[4rem] w-[5rem] object-contain 
         tablet:w-[3rem] tablet:mr-0 largeTablet:mr-0' />
-        <CartItems/>
+        <CartItems show = {showCart}/>
       </div>
     </nav>
   );

@@ -34,3 +34,6 @@
 .addOpac{
     @apply opacity-50 transition-all duration-200 ease-linear
 }
+.showCartedItem{
+    @apply block transition-all duration-300 ease-linear
+}

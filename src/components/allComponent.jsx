@@ -14,24 +14,28 @@ let allItems = [
         itemsImage: item1,
         actualPrice: 1200,
         discount:20,
+        count: 1
     },
     {
         id:2,
         itemsImage: item2,
         actualPrice:1500,
         discount:30,
+        count: 1
     },
     {
         id: 3,
         itemsImage: item3,
         actualPrice: 1600,
         discount: 40,
+        count: 1
     },
     {
         id: 4,
         itemsImage: item4,
         actualPrice:2000,
         discount:10,
+        count: 1
     },
    
 ]

@@ -18,7 +18,6 @@ const Main = () => {
 
   const Results = ImageFxn(item, previousIcon, nextIcon, addOpac)
 
- 
   let imageSrc = Results.selectedItem || Results.prevNextImage || alldata.allItem[0].itemsImage
 
   return (
