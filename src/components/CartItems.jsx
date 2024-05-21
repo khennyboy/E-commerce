@@ -40,7 +40,7 @@ const CartItems = ({ show }) => {
                 <button className='p-2' onClick={()=>handleDeleteCart(eachItem.id)}><img src={deleteIcon} alt="delete_icon" /></button>
               </div>
               <button className='bg-DarkOrange text-white rounded-[5px] font-bold  py-2 hover:bg-PaleOrange hover:text-DarkOrange
-                transition-all duration-300 ease-linear  hover:ring-1 focus:ring-DarkOrange ring-offset-2 w-full block'>Checkout</button>
+                transition-all duration-300 ease-linear  focus:ring-1 focus:ring-DarkOrange ring-offset-2 w-full block'>Checkout</button>
               </div>
           )
         })
