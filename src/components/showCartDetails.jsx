@@ -55,7 +55,7 @@ function useShowCartDetails(addRef, minusRef, addToCartRef) {
             let cartItem = allData.allItem[index]
             allData.setCartItem((prevCartItems) => [...prevCartItems, {
                 ...cartItem,
-                id: allData.cartItem.length + 1
+                id: allData.cartItem.length
             }]);
             toast.success('Cart added successfully')
          }
