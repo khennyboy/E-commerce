@@ -37,7 +37,7 @@ const CartItems = ({ show }) => {
                   <span>${ eachItem.actualPrice - (eachItem.actualPrice*(eachItem.discount/100))} x {eachItem.count}</span>
                   <span className='font-bold ml-3 inline-block text-lg largeTablet:text-base tablet:text-base'>{discountPrice}</span>
                 </div>
-                <button className='p-2' onClick={()=>handleDeleteCart(index)}><img src={deleteIcon} alt="delete_icon" /></button>
+                <button className='p-2' onClick={()=>handleDeleteCart(eachItem.id)}><img src={deleteIcon} alt="delete_icon" /></button>
               </div>
               <button className='bg-DarkOrange text-white rounded-[5px] font-bold  py-2 hover:bg-PaleOrange hover:text-DarkOrange
                 transition-all duration-300 ease-linear  hover:ring-1 focus:ring-DarkOrange ring-offset-2 w-full block'>Checkout</button>
