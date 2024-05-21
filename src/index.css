@@ -16,7 +16,7 @@
 }
 
 .changeImage{
-    @apply top-1/2 bottom-1/2 my-auto absolute hidden tablet:flex bg-white shadow-md 
+    @apply top-0 bottom-0 my-auto absolute hidden tablet:flex bg-white shadow-md 
     rounded-[50%] h-[2rem] w-[2rem] items-center justify-center tablet:cursor-pointer
 }
 
@@ -26,3 +26,22 @@
 .addOpac{
     @apply opacity-50 transition-all duration-200 ease-linear
 }
+
+.cartedItem::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  .cartedItem::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+
+  .cartedItem::-webkit-scrollbar-thumb {
+    background: hsl(26, 100%, 55%)
+  }
+  
+
+  .cartedItem::-webkit-scrollbar-thumb:hover {
+    background: rgb(229, 161, 33)
+  }

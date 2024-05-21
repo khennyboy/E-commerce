@@ -35,13 +35,13 @@ let allItems = [
         itemsImage: item4,
         actualPrice:2000,
         discount:10,
-         count: 1
+        count: 1
     },
    
 ]
 export const datas = React.createContext()
 const AllComponent = () => {
-    const [cartItem, setCartItem] = useState('')
+    const [cartItem, setCartItem] = useState([])
     const [allItem, setAllItem] = useState(allItems)
     const [currItem, setCurrItem] = useState(allItem[0].itemsImage)
    

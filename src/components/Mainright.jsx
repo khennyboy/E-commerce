@@ -40,7 +40,7 @@ const Mainright = () => {
           </div>
           <button className='bg-DarkOrange cursor-pointer text-white font-bold  rounded-[5px]
            hover:bg-PaleOrange hover:text-DarkOrange transition-all duration-300 ease-linear group 
-             android:py-[10px] hover:ring-1 hover:ring-DarkOrange ring-offset-2 ' ref={addToCart}>
+             android:py-[10px] focus:ring-1 hover:ring-DarkOrange ring-offset-2 ' ref={addToCart}>
               <img src={cartIcon} alt="cart_icon" className='align-middle inline-block  mr-[1rem] brightness-200 group-hover:brightness-0
               mediumDesktop:mr-1'  />
               Add to cart

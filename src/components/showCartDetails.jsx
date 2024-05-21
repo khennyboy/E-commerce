@@ -44,6 +44,7 @@ function useShowCartDetails(addRef, minusRef, addToCartRef) {
                 });
                 const data  = allData.allItem[index]
                 setItemData({
+                    id: data.id,
                     actualPrice : data.actualPrice,
                     discount : data.discount,
                     count : data.count
@@ -51,7 +52,11 @@ function useShowCartDetails(addRef, minusRef, addToCartRef) {
             }
          }
          const addToCartFxn = function(){
-            allData.setCartItem((prevCartItems) => [...prevCartItems, allData.allItem[index]]);
+            let cartItem = allData.allItem[index]
+            allData.setCartItem((prevCartItems) => [...prevCartItems, {
+                ...cartItem,
+                id: allData.cartItem.length + 1
+            }]);
             toast.success('Cart added successfully')
          }
         addToCart.addEventListener('click', addToCartFxn)
@@ -68,4 +73,3 @@ function useShowCartDetails(addRef, minusRef, addToCartRef) {
 }
 
 export default useShowCartDetails
-
