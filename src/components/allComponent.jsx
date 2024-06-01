@@ -1,11 +1,10 @@
 import React,{useState} from 'react'
-import Main from './Main'
-import Nav from './Nav'
 import item1 from '../images/image-product-1.jpg'
 import item2 from '../images/image-product-2.jpg'
 import item3 from '../images/image-product-3.jpg'
 import item4 from '../images/image-product-4.jpg'
 import { ToastContainer } from 'react-toastify';
+import Routes from '../Routes'
 
 
 let allItems = [
@@ -41,6 +40,7 @@ let allItems = [
 ]
 export const datas = React.createContext()
 const AllComponent = () => {
+
     const [cartItem, setCartItem] = useState([])
     const [allItem, setAllItem] = useState(allItems)
     const [currItem, setCurrItem] = useState(allItem[0].itemsImage)
@@ -48,8 +48,7 @@ const AllComponent = () => {
   return (
     <datas.Provider value={{cartItem, allItem, setAllItem, setCartItem, currItem, setCurrItem}}>
         <ToastContainer />
-        <Nav/>
-        <Main/>
+        <Routes/>
     </datas.Provider>
   )
 }
