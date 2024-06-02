@@ -38,12 +38,12 @@ const Nav = () => {
           tablet:fixed tablet:top-0 tablet:h-full tablet:left-0
           tablet:shadow-2xl tablet:z-10 tablet:overflow-hidden 
           tablet:transition-all tablet:duration-300 android:duration-200 tablet:ease-linear tablet:bg-white
-          tablet:space-x-0 tablet:block 
+          tablet:space-x-0 tablet:block *:block
           ${openNav ? 'w-[50vw] android:w-[80vw]' : 'w-[0]'}`} ref={navContentRef}
         >
           <div 
             className='hidden tablet:block tablet:absolute tablet:top-[2rem] 
-            tablet:left-[2rem] android:left-4 cursor-pointer p-2 ' 
+            tablet:left-[2rem] android:left-4 cursor-pointer p-2  ' 
             onClick={(e) => {
               e.stopPropagation();
               setOpenNav(prev => !prev);
