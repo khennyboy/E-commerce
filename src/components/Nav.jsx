@@ -6,6 +6,7 @@ import close from '../images/icon-close.svg';
 import useNavEffect from './NavFxn'; 
 import CartItems from './CartItems';
 import { Outlet } from 'react-router-dom';
+import useCartItem from './useCartItem';
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -14,6 +15,7 @@ const Nav = () => {
   const [showCart, setShowCart] = useState(false);
 
   useNavEffect(openNav, setOpenNav, navContentRef, openMenuRef);
+  const cartItemLength = useCartItem();
 
   return (
    <>
@@ -21,7 +23,7 @@ const Nav = () => {
         <div 
           className='cursor-pointer hidden tablet:block mr-[1.5rem]' 
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation()
             setOpenNav(prev => !prev);
           }}
           ref={openMenuRef}
@@ -59,12 +61,16 @@ const Nav = () => {
         </div>
 
         <div className='flex items-center gap-[3rem] relative android:gap-[1rem]'>
+          <div className='relative p-3'>  {/*this is where the cart stuff begin*/ }
           <img 
             src={cartIcon} 
             alt="cart icon" 
             className='cursor-pointer' 
             onClick={() => setShowCart(prev => !prev)} 
           />
+          {cartItemLength!==0 && <span className='absolute rounded-[50%] h-4 w-4 flex justify-center items-center
+           right-2 top-1 text-white bg-DarkOrange text-[10px] p-2'>{cartItemLength}</span> }
+          </div>
           <img 
             src={avatar} 
             alt="user" 

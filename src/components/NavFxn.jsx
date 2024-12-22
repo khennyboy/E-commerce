@@ -25,7 +25,6 @@ const useNavEffect = (openNav, setOpenNav, nav, navMenu) => {
 
   const handleDocumentClick = useCallback((event) => {
     if (
-      openNav &&
       nav.current &&
       !nav.current.contains(event.target) &&
       navMenu.current &&
@@ -33,7 +32,7 @@ const useNavEffect = (openNav, setOpenNav, nav, navMenu) => {
     ) {
       setOpenNav(false);
     }
-  }, [openNav, nav, navMenu, setOpenNav]);
+  }, [nav, navMenu, setOpenNav]);
 
   useEffect(() => {
     document.addEventListener('click', handleDocumentClick);

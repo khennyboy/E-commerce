@@ -5,11 +5,11 @@ import previous from '../images/icon-previous.svg'
 import { datas } from './allComponent'
 import Mainright from './Mainright';
 import ImageFxn from './ImageFxn';
+import Modal from './Modal';
 
 
 const Main = () => {
   let alldata = useContext(datas)
-  console.log(alldata)
   const [showPrevItem, SetshowPrevItem] = useState(false)
   const item = useRef(null)
   const previousIcon= useRef(null)
@@ -54,17 +54,7 @@ const Main = () => {
             </div>
         </div>
         <Mainright/>
-
-        <div id="myModal" className={`fixed z-1 
-        py-[3rem] left-0 top-0 w-full h-full overflow-auto
-        bg-black/90 group ${showPrevItem ? 'block': 'hidden'}`}>
-          <span className={`absolute right-12 top-8 text-white text-[40px] font-bold 
-           cursor-pointer tablet:top-4 android:right-8`}  onClick={()=>SetshowPrevItem(false)}>&times;</span>
-          <div className='w-[80%] max-w-[700px] mx-auto tablet:h-[80%] android:h-[90%] tablet:mt-8 android:w-[95%] 
-              animate-zoom'>
-            <img  alt='itemImage' id="img01" src={imageSrc} className='w-full h-full object-cover'/>
-          </div>
-      </div>
+        <Modal infos = {{imageSrc, SetshowPrevItem, showPrevItem}}/>
 
     </div>
   )
